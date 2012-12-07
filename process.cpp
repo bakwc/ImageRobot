@@ -34,6 +34,7 @@ TProcess::TProcess(const QString &imageUrl, size_t thumbSize)
 }
 
 void TProcess::run() {
+       // QDataStream::setVersion(QDataStream::Qt_4_6);
     QNetworkAccessManager qnam;
     QNetworkRequest request = QNetworkRequest(QUrl(ImageInfo.ImageUrl));
     request.setRawHeader("User-Agent", "Mozilla/6.0 (Windows NT 6.2; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1");
